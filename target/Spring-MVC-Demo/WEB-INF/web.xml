@@ -15,13 +15,15 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
     <!-- 定义Spring MVC的前端控制器 -->
     <servlet>
         <servlet-name>springMVC</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <!-- 当前Servlet的参数信息 -->
         <init-param>
-            <!--配置dispatcher.xml作为mvc的配置文件-->
+            <!--配置dispatcher-servlet.xml作为mvc的配置文件-->
+            <!--contextConfigLocation是参数名称，该参数的值包含SpringMVC的配置文件路径-->
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
         </init-param>
