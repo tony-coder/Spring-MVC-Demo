@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>welcome</title>
+    <title>测试@RequestMapping注解</title>
 </head>
 <body>
-<!-- 页面可以访问Controller传递传递出来的message -->
-${requestScope.message}
+<!-- 页面可以访问Controller传递传递出来的模型User对象 -->
+欢迎[${requestScope.user.username }]登陆
+<br>
 </body>
 </html>
