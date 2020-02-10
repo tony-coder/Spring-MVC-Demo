@@ -32,7 +32,7 @@
 
     <!-- 基于配置文件方式 -->
     <!-- 配置Handle，映射"/hello"请求 -->
-    <bean name="/hello" class="com.demo.controller.HelloController"/>
+    <bean name="/hello" class="com.demo.controller.C02.HelloController"/>
     <!-- 处理映射器将bean的name作为url进行查找，需要在配置Handle时指定name（即url） -->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <!-- SimpleControllerHandlerAdapter是一个处理器适配器，所有处理适配器都要实现 HandlerAdapter接口-->

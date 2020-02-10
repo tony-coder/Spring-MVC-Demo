@@ -1,4 +1,4 @@
-package com.demo.controller;
+package com.demo.controller.C02;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

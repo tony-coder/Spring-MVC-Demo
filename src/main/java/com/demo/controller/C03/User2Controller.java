@@ -1,4 +1,4 @@
-package com.demo.controller;
+package com.demo.controller.C03;
 
 import com.demo.domain.User;
 import org.apache.commons.logging.Log;

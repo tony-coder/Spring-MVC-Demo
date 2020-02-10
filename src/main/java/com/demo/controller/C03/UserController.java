@@ -1,4 +1,4 @@
-package com.demo.controller;
+package com.demo.controller.C03;
 
 import com.demo.domain.User;
 import org.apache.commons.logging.Log;
@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
