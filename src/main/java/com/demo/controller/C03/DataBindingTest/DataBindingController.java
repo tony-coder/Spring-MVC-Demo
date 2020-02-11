@@ -1,4 +1,4 @@
-package com.demo.controller.C03;
+package com.demo.controller.C03.DataBindingTest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

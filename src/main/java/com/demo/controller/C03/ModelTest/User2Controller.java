@@ -1,8 +1,9 @@
-package com.demo.controller.C03;
+package com.demo.controller.C03.ModelTest;
 
 import com.demo.domain.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * User2Controller 和 User1Controller的代码功能基本一致，只是存储对象由Model改成了ModelMap
  */
-
+@Controller
+@RequestMapping(value = "/ModelTest")
 public class User2Controller {
     private static final Log logger = LogFactory.getLog(User1Controller.class);
 
