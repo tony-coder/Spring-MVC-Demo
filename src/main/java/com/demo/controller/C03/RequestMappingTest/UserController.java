@@ -1,4 +1,4 @@
-package com.demo.controller.C03;
+package com.demo.controller.C03.RequestMappingTest;
 
 import com.demo.domain.User;
 import org.apache.commons.logging.Log;
