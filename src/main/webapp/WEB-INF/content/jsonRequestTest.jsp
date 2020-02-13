@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
+<%-- 1. 页面使用jquery发送json数据，再页面的<head>部分，引入jquery和json2的js文件 --%>
+<%-- 2. 页面载入时调用 testRequestBody 函数 --%>
+<%-- 3. testRequestBody 函数发送异步请求到 "json/testRequestBody" --%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>测试接收JSON格式的数据</title>
@@ -12,11 +15,11 @@
         });
 
         function testRequestBody() {
-            $.ajax("${pageContext.request.contextPath}/json/testRequestBody",// 发送请求的URL字符串。
+            $.ajax("${pageContext.request.contextPath}/json/testRequestBody",  // 发送请求的URL字符串。
                 {
                     dataType: "json", // 预期服务器返回的数据类型。
                     type: "post", //  请求方式 POST或GET
-                    contentType: "application/json", //  发送信息至服务器时的内容编码类型
+                    contentType: "application/json", //  发送信息至服务器时的内容编码类型 为json格式
                     // 发送到服务器的数据。
                     data: JSON.stringify({id: 1, name: "Spring MVC企业应用实战"}),
                     async: true, // 默认设置下，所有请求均为异步请求。如果设置为false，则发送同步请求

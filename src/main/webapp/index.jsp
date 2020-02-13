@@ -25,7 +25,10 @@
 <a href="loginForm5">测试@ModelAttribute注释一个方法的参数 </a><br><br>
 
 <h2>接收JSON格式的数据</h2>
-<a href="jsonRequestTest">测试接收JSON格式的数据</a>
+<a href="jsonRequestTest">测试接收JSON格式的数据</a><br><br>
+
+<h2>返沪JSON格式的数据</h2>
+<a href="jsonResponseTest">测试返回JSON格式的数据</a><br><br>
 
 </body>
 </html>

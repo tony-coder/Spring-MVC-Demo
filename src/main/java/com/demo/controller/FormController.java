@@ -12,6 +12,4 @@ public class FormController {
         // 动态跳转页面
         return formName;
     }
-
-
 }
