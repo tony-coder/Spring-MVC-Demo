@@ -1,6 +1,6 @@
 package com.demo.controller.C03.ModelTest;
 
-import com.demo.domain.User;
+import com.demo.domain.C03.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;

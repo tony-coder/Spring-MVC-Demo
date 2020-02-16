@@ -1,6 +1,6 @@
 package com.demo.controller.C03.JsonRequestTest;
 
-import com.demo.domain.Book;
+import com.demo.domain.C03.Book;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -1,6 +1,6 @@
 package com.demo.controller.C03.JsonResponseTest;
 
-import com.demo.domain.Book;
+import com.demo.domain.C03.Book;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

@@ -1,6 +1,6 @@
 package com.demo.controller.C03.RequestMappingTest;
 
-import com.demo.domain.User;
+import com.demo.domain.C03.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Controller注解用于指示该类是一个控制器，可以同时处理多个请求动作
-@Controller
+@Controller("UserController1")
 // RequestMapping可以用来注释一个控制器类，此时，所有方法都将映射为相对于类级别的请求,
 // 表示该控制器处理所有的请求都被映射到 value属性所指示的路径下
 @RequestMapping(value = "/user")
