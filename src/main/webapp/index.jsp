@@ -46,7 +46,21 @@
 <br>
 
 <h2>checkbox标签的使用</h2>
-<a href="04/checkboxForm">注册</a>
+<a href="04/checkboxForm">选择</a>
+<br><br>
+
+<h2>checkboxes标签的使用</h2>
+<a href="04/checkboxesForm">选择</a>
+<p>checkboxes呈现出的标签Label和其值相同</p>
+
+<a href="04/checkboxesForm2">选择</a>
+<p>checkboxes呈现出来的Label和value不同 使用map</p>
+
+<a href="04/checkboxesForm3">选择</a>
+<p>
+    当使用Array或者集合作为数据源，且里面的元素都是一个domain对象时，还可以使用checkboxes标签的itemLabel和itemValue属性来表示，
+    使用数组或者集合中元素对象的哪一个属性作为需要呈现的单选框的label和value
+</p>
 
 </body>
 </html>
