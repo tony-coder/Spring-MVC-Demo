@@ -30,7 +30,7 @@
 <h2>返回JSON格式的数据</h2>
 <a href="jsonResponseTest">测试返回JSON格式的数据</a><br><br>
 
-<h2>Form和input标签的使用</h2>
+<h2>form和input标签的使用</h2>
 <a href="04/registerForm">注册</a>
 <p>
     发送到控制器UserController，将uer设置到model当中，属性名为"command"，然后将请求转发到/04/registerForm.jsp，
@@ -43,6 +43,10 @@
     SpringMVC 指定form标签默认自动绑定的是Model的command属性值，那么当from对象对应的属性不是command时，
     可以使用commandName属性或modelAttribute指定Model哪个属性作为from标签需要绑定的command对象
 </p>
+<br>
+
+<h2>checkbox标签的使用</h2>
+<a href="04/checkboxForm">注册</a>
 
 </body>
 </html>

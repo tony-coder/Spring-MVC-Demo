@@ -43,6 +43,10 @@
     SpringMVC 指定form标签默认自动绑定的是Model的command属性值，那么当from对象对应的属性不是command时，
     可以使用commandName属性或modelAttribute指定Model哪个属性作为from标签需要绑定的command对象
 </p>
+<br>
+
+<h2>checkbox标签的使用</h2>
+<a href="04/checkboxForm">注册</a>
 
 </body>
 </html>
