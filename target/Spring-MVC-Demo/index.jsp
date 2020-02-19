@@ -61,6 +61,22 @@
     当使用Array或者集合作为数据源，且里面的元素都是一个domain对象时，还可以使用checkboxes标签的itemLabel和itemValue属性来表示，
     使用数组或者集合中元素对象的哪一个属性作为需要呈现的单选框的label和value
 </p>
+<br>
+
+<h2>select、option和options标签的使用</h2>
+<a href="04/selectForm">选择</a>
+<p>form:select标签直接添加form:option</p>
+
+<a href="04/slelctForm2">选择</a>
+<p>form:select标签items属性绑定Map</p>
+
+<a href="04/slelctForm3">选择</a>
+<p>使用form:options标签items属性绑定Map</p>
+
+<a href="04/selectForm4">选择</a>
+<p>使用form:options标签绑定Object</p>
+
+
 
 </body>
 </html>

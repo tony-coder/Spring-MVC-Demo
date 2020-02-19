@@ -74,5 +74,4 @@ public class UserController {
         model.addAttribute("deptList", deptList);
         return "forward:/jsp/04/checkboxesForm3.jsp";
     }
-
 }
