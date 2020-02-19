@@ -75,7 +75,10 @@
 
 <a href="04/selectForm4">选择</a>
 <p>使用form:options标签绑定Object</p>
+<br>
 
+<h2>errors标签的使用</h2>
+<a href="04/registerForm3">注册</a>
 
 
 </body>
