@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
     private static final Log logger = LogFactory.getLog(UserController.class);
 
-    @RequestMapping(value = "/{formName}")
+    //@RequestMapping(value = "/{formName}")
     public String loginForm(@PathVariable String formName, Model model) {
         User user = new User();
         model.addAttribute("user", user);

@@ -46,8 +46,10 @@
     </mvc:interceptors>
 
     <!-- AcceptHeaderLocaleResolver 配置,因为AcceptHeaderLocaleResolver是默认语言区域解析器，不配置也可以  -->
-    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>
+    <!--<bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>-->
 
+    <!-- SessionLocaleResolver 配置 -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
 
     <!-- 基于配置文件方式 -->
     <!-- 配置Handle，映射"/hello"请求 -->
