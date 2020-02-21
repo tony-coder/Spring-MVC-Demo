@@ -80,6 +80,12 @@
 <h2>errors标签的使用</h2>
 <a href="04/registerForm3">注册</a>
 
+<h2>国际化</h2>
+<a href="05/loginForm">登录</a>
+<p>
+    基于浏览器请求的国际化实现 AcceptHeaderLocaleResolver国际化,使用它，Spring MVC会读取浏览器的accept-language标题，来确定使用哪个语言区域
+</p>
+
 
 </body>
 </html>
