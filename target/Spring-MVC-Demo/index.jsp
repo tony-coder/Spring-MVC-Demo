@@ -81,14 +81,19 @@
 <a href="04/registerForm3">注册</a>
 
 <h2>国际化</h2>
-<a href="05/loginForm">登录</a>
+<a href="05/1/loginForm">登录</a>
 <p>
     基于浏览器请求的国际化实现，AcceptHeaderLocaleResolver国际化，使用它，Spring MVC会读取浏览器的accept-language标题，来确定使用哪个语言区域
 </p>
-<a href="05/loginForm2">登录</a>
+<a href="05/2/loginForm2">登录</a>
 <p>
     基于SessionLocaleResolver的国际化实现，SessionLocaleResolver不是默认的语言区域解析器，需要对其进行显示配置。如果使用它，SpringMVC会从
     HttpSession作用域中获取用户所设置的语言区域，来确定使用哪个语言区域
+</p>
+<a href="05/3/loginForm3">登录</a>
+<p>
+    测试基于CookieLocaleResolver的国际化实现，CookieLocaleResolver不是默认的语言区域解析器，需要显示对其进行配置，使用它，Spring MVC会从
+    Cookie中获取用户所设置的语言区域，来确定使用哪个语言区域
 </p>
 
 </body>

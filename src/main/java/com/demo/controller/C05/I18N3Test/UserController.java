@@ -1,4 +1,4 @@
-package com.demo.controller.C05.I18N2Test;
+package com.demo.controller.C05.I18N3Test;
 
 import com.demo.domain.C05.User;
 import org.apache.commons.logging.Log;
@@ -11,34 +11,35 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.support.RequestContext;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
-@Controller("Controller8")
-@RequestMapping(value = "/05/2")
+@Controller("UserController9")
+@RequestMapping(value = "/05/3")
 public class UserController {
-    private static final Log logger = LogFactory.getLog(com.demo.controller.C05.I18NTest.UserController.class);
+    private static final Log logger = LogFactory.getLog(UserController.class);
 
     @RequestMapping(value = "/{formName}")
-    public String loginForm(@PathVariable String formName, String request_locale, Model model, HttpServletRequest request) {
+    public String loginForm(
+            @PathVariable String formName,
+            String request_locale,
+            Model model,
+            HttpServletRequest request,
+            HttpServletResponse response) {
         logger.info("request_locale = " + request_locale);
         if (request_locale != null) {
-            // 设置中文环境
             if (request_locale.equals("zh_CN")) {
                 Locale locale = new Locale("zh", "CN");
-                request.getSession().setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, locale);
-            }
-            // 设置英文环境
-            else if (request_locale.equals("en_US")) {
+                (new CookieLocaleResolver()).setLocale(request, response, locale);
+            } else if (request_locale.equals("en_US")) {
                 Locale locale = new Locale("en", "US");
-                request.getSession().setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, locale);
-            }
-            // 使用之前的语言环境
-            else {
-                request.getSession().setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, LocaleContextHolder.getLocale());
+                (new CookieLocaleResolver()).setLocale(request, response, locale);
+            } else {
+                (new CookieLocaleResolver()).setLocale(request, response, LocaleContextHolder.getLocale());
             }
         }
         User user = new User();

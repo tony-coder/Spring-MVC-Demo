@@ -15,11 +15,11 @@ import org.springframework.web.servlet.support.RequestContext;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller(value = "UserController7")
-@RequestMapping(value = "/05")
+@RequestMapping(value = "/05/1")
 public class UserController {
     private static final Log logger = LogFactory.getLog(UserController.class);
 
-    //@RequestMapping(value = "/{formName}")
+    @RequestMapping(value = "/{formName}")
     public String loginForm(@PathVariable String formName, Model model) {
         User user = new User();
         model.addAttribute("user", user);
