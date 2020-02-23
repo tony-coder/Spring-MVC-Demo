@@ -95,6 +95,9 @@
     测试基于CookieLocaleResolver的国际化实现，CookieLocaleResolver不是默认的语言区域解析器，需要显示对其进行配置，使用它，Spring MVC会从
     Cookie中获取用户所设置的语言区域，来确定使用哪个语言区域
 </p>
+<br>
 
+<h2>Spring MVC的数据转换</h2>
+<a href="06/registerForm">注册</a>
 </body>
 </html>
