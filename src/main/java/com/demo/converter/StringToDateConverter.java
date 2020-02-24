@@ -15,6 +15,7 @@ public class StringToDateConverter implements Converter<String, Date> {
         this.datePattern = datePattern;
     }
 
+    // Converter<S,T>接口的类型转换方法
     @Override
     public Date convert(String date) {
         try {
@@ -27,7 +28,4 @@ public class StringToDateConverter implements Converter<String, Date> {
             return null;
         }
     }
-
-    // Converter<S,T>接口的类型转换方法
-
 }

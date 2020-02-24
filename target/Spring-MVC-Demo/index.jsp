@@ -99,5 +99,15 @@
 
 <h2>Spring MVC的数据转换</h2>
 <a href="06/registerForm">注册</a>
+<p>
+    使用ConversionService转换数据
+</p>
+
+<a href="06/2/registerForm2">注册</a>
+<p>
+    @InitBinde注解会再控制器初始化时注册属性编辑器。WebDataBinder对象用于处理请求和处理方法的绑定工作。binder.registerCustomEditor
+    方法将传入的Date类型使用DateEditor类进行转换
+</p>
+
 </body>
 </html>

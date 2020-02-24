@@ -1,4 +1,5 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
+<%-- 注意这边不加_rt会页面会报错 --%>
 <%--
   Created by IntelliJ IDEA.
   User: lenovo
