@@ -109,5 +109,10 @@
     方法将传入的Date类型使用DateEditor类进行转换
 </p>
 
+<a href="06/3/registerForm3">注册</a>
+<p>
+    使用WebBindingInitializer 注册全局自定义编辑器转换数据
+</p>
+
 </body>
 </html>

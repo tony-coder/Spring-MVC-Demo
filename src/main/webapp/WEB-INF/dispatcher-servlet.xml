@@ -32,7 +32,12 @@
     <!-- 配置annotation类型的处理映射器 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
     <!-- 配置annotation类型的处理器适配器 -->
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+    <!-- 通过AnnotationMethodHandlerAdapter装配自定义编辑器 在Spring 5.x中已经去除，用RequestMappingHandlerAdapter代替-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="webBindingInitializer">
+            <bean class="com.demo.converter.DateBindingInitializer"/>
+        </property>
+    </bean>
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 视图的前缀 -->
