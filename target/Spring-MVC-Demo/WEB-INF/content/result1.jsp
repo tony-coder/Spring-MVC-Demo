@@ -7,7 +7,7 @@
 </head>
 <body>
 访问request作用范围域中的loginname对象：${requestScope.loginname }<br>
-再request作用域中访问到了Model的值
+在request作用域中访问到了Model的值
 <br>
 </body>
 </html>
