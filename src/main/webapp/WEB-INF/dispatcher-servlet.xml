@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-4.2.xsd
@@ -18,13 +19,25 @@
     <mvc:default-servlet-handler/>
 
     <!-- 装配自定义的类型转换器，覆盖<mvc:annotation-driven/>中的默认实现类 -->
-    <mvc:annotation-driven conversion-service="conversionService"/>
+    <!--<mvc:annotation-driven conversion-service="conversionService"/>-->
 
     <!-- 自定义的类型转换器 -->
-    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+    <!--<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <list>
                 <bean class="com.demo.converter.StringToDateConverter" p:datePattern="yyyy-MM-dd"/>
+            </list>
+        </property>
+    </bean>-->
+
+    <!-- 装配自定义格式化 -->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+
+    <!-- 格式化 -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <list>
+                <bean class="com.demo.formatter.DateFormatter" c:_0="yyyy-MM-dd"/>  <!-- 构造器注入 -->
             </list>
         </property>
     </bean>
@@ -34,9 +47,9 @@
     <!-- 配置annotation类型的处理器适配器 -->
     <!-- 通过AnnotationMethodHandlerAdapter装配自定义编辑器 在Spring 5.x中已经去除，用RequestMappingHandlerAdapter代替-->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-        <property name="webBindingInitializer">
+        <!--<property name="webBindingInitializer">
             <bean class="com.demo.converter.DateBindingInitializer"/>
-        </property>
+        </property>-->
     </bean>
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
