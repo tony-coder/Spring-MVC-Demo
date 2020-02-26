@@ -12,7 +12,7 @@
 
     <!-- 基于注解方式 -->
     <!-- spring可以自动去扫描base-pack下面的包或者子包下面的java文件，如果扫描到有Spring的相关注解的类，则把这些类注册为Spring的bean -->
-    <context:component-scan base-package="com.demo.controller"/>
+    <context:component-scan base-package="com.demo"/>
     <!-- 设置配置方案 -->
     <mvc:annotation-driven/>
     <!-- 使用默认的Servlet来响应静态文件 -->

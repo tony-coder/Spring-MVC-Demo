@@ -116,7 +116,17 @@
 
 <a href="06/4/testForm">测试</a>
 <p>
-
+    使用AnnotationFormatterFactory&lt;A extends Annotation&gt; 即使用注解格式化数据
 </p>
+
+<h2>数据校验</h2>
+<a href="06/5/loginForm">测试</a>
+<p>
+    测试Spring的Validation校验，注意，如果和国际化一起使用，如果path对应实体类中的属性在国际化配置文件中存在同名的标签，则返回的错误信息被国际化覆盖
+</p>
+<p>
+    <b>当使用Spring MVC标签显示错误消息时，SpringMVC会查看WEB上下文 是否装配了对应的国际化消息，如果没有，则显示默认的错误消息，否则使用国际化消息</b>
+</p>
+
 </body>
 </html>
