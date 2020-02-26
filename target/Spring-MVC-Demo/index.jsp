@@ -114,5 +114,9 @@
     使用WebBindingInitializer 注册全局自定义编辑器转换数据
 </p>
 
+<a href="06/4/testForm">测试</a>
+<p>
+
+</p>
 </body>
 </html>

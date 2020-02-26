@@ -31,7 +31,7 @@
     </bean>-->
 
     <!-- 装配自定义格式化 -->
-    <mvc:annotation-driven conversion-service="conversionService"/>
+    <!--<mvc:annotation-driven conversion-service="conversionService"/>-->
 
     <!-- DateFormatter bean -->
     <bean id="dateFormatter" class="com.demo.formatter.DateFormatter" c:_0="yyyy-MM-dd"/>
@@ -41,6 +41,8 @@
         <!--<property name="formatters">
             <list>
                 <bean class="com.demo.formatter.DateFormatter" c:_0="yyyy-MM-dd"/>  &lt;!&ndash; 构造器注入 &ndash;&gt;
+                <bean class="org.springframework.format.datetime.DateFormatter"
+                      p:pattern="yyyy-MM-dd"/>  &lt;!&ndash; 使用Spring提供的Formatter实现 &ndash;&gt;
             </list>
         </property>-->
         <!-- formatterRegistrar注册Formatter -->
