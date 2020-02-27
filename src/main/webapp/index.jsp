@@ -127,6 +127,10 @@
 <p>
     <b>当使用Spring MVC标签显示错误消息时，SpringMVC会查看WEB上下文 是否装配了对应的国际化消息，如果没有，则显示默认的错误消息，否则使用国际化消息</b>
 </p>
+<a href="06/6/registerForm4">测试</a>
+<p>
+    测试 JSR 303校验，使用的是 Hibernate Validator 的实现，同时对其实现国际化
+</p>
 <br>
 
 </body>
