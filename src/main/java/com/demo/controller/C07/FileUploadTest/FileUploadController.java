@@ -1,12 +1,11 @@
 package com.demo.controller.C07.FileUploadTest;
 
+import com.demo.domain.C07.FileUploadTest.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -47,7 +46,33 @@ public class FileUploadController {
         } else {
             return "/07/error";
         }
+    }
 
+    @RequestMapping(value = "/register")
+    public String register(HttpServletRequest request,
+                           @ModelAttribute User user,
+                           Model model) throws Exception {
+        System.out.println(user.getUsername());
+        logger.info(user.getUsername());
+        // 如果文件不为空，写入上传路径
+        if (!user.getImage().isEmpty()) {
+            // 上传文件路径
+            String path = request.getServletContext().getRealPath("/images/");
+            // 上传文件名
+            String filename = user.getImage().getOriginalFilename();
+            File filepath = new File(path, filename);
+            // 判断路径是否存在，如果不存在就创建一个
+            if (!filepath.getParentFile().exists()) {
+                filepath.getParentFile().mkdirs();
+            }
+            // 将上传文件保存到一个目标文件当中
+            user.getImage().transferTo(new File(path + File.separator + filename));
+            // 将用户添加到model
+            model.addAttribute("user", user);
+            return "/07/userInfo";
+        } else {
+            return "error";
+        }
     }
 
 }

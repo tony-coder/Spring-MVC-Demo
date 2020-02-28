@@ -134,6 +134,9 @@
 <br>
 <h2>Spring MVC 的文件上传</h2>
 <a href="07/uploadForm">文件上传</a>
+<br><br>
+<a href="07/registerForm">注册</a>
+<p>使用对象接收上传文件</p>
 
 </body>
 </html>
