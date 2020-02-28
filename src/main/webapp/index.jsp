@@ -132,6 +132,8 @@
     测试 JSR 303校验，使用的是 Hibernate Validator 的实现，同时对其实现国际化
 </p>
 <br>
+<h2>Spring MVC 的文件上传</h2>
+<a href="07/uploadForm">文件上传</a>
 
 </body>
 </html>
