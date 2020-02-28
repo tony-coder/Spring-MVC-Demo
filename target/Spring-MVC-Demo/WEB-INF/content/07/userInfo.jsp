@@ -14,7 +14,12 @@
 </head>
 <body>
 
-<a href="#">${requestScope.user.image.originalFilename}</a>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";  //获取web应用根目录路径
+%>
+
+<a href="<%=basePath%>07/download?filename=${requestScope.user.image.originalFilename}">${requestScope.user.image.originalFilename}</a>
 
 </body>
 </html>
