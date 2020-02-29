@@ -76,6 +76,15 @@
         <!-- 当返回的视图字符串是"helloWorld"，经过视图解析器之后，则视图的完整路径为/WEB-INF/content/helloWorld.jsp -->
     </bean>
 
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/07/*"/>
+            <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+            <bean class="com.demo.interceptor.AuthorizationInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!-- 配置MultipartResolver 启用文件上传功能 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- 上传文件大小上限，单位为字节（10MB） -->

@@ -137,6 +137,10 @@
 <br><br>
 <a href="07/registerForm">注册</a>
 <p>使用对象接收上传文件 Spring MVC的文件下载</p>
-
+<h2>Spring MVC 拦截器</h2>
+<a href="07/loginForm">登录</a>
+<p>
+    拦截器实现用户权限验证
+</p>
 </body>
 </html>
